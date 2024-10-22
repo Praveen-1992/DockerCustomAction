@@ -1,0 +1,20 @@
+name: Docker_Hello_word_Praveen_1052
+description: Greet someone and record the time
+author: Praveen
+
+inputs:
+  who-to-greet:
+    description: Who to greet
+    required: true
+    default: word
+outputs:
+  time: 
+    description: The time we greeted you
+branding:
+  icon: 'shield'
+  color: 'blue'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.who-to-greet }}
